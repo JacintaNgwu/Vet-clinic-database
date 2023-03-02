@@ -62,7 +62,7 @@ WHERE species.name = 'Pokemon';
 SELECT owners.full_name, animals.name FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id;
 
-SELECT species.name, COUNT(animals.id) as count FROM species
+SELECT species.name, COUNT(animals.species_id) as count FROM species
 LEFT JOIN animals ON species.id = animals.species_id
 GROUP BY species.id;
 
@@ -75,7 +75,7 @@ SELECT animals.name FROM animals
 JOIN owners ON animals.owner_id = owners.id
 WHERE escape_attempts = 0 AND owners.full_name = 'Dean Winchester';
 
-SELECT owners.full_name, COUNT(animals.id) as count FROM owners
+SELECT owners.full_name, COUNT(animals.species_id) as count FROM owners
 LEFT JOIN animals ON owners.id = animals.owner_id
 GROUP BY owners.id ORDER BY count DESC
 LIMIT 1;
