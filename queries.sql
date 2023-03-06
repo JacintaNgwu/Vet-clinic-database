@@ -183,3 +183,11 @@ JOIN species on animals.species_id = species.id
 WHERE vet.name = 'Maisy Smith'
 GROUP BY species.name, vet.name
 ORDER BY count DESC lIMIT 1;
+
+EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animal_id = 4;
+EXPLAIN ANALYZE SELECT * FROM visits where vet_id = 2;
+EXPLAIN ANALYZE SELECT * FROM owners where email = 'owner_18327@mail.com';
+
+CREATE INDEX animal_id_asc on visits(animal_id ASC);
+CREATE INDEX vet_id_asc on visits (vet_id ASC);
+CREATE INDEX email_asc on owners(email ASC);
