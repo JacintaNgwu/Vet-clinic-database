@@ -40,6 +40,7 @@
 
 Apart from building data structure, you will be challenged with tasks that require SQL queries to answer specific questions.
 
+![screenshot__201__720](https://user-images.githubusercontent.com/100554236/223683531-c484a59a-ad74-4be7-9233-7563b4a13374.png)
 
 ## 🛠 Built With <a name="built-with"></a>
 
